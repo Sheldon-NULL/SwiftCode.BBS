@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>..\SwiftCode.BBS.Model\SwiftCode.BBS.Model.sml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="SwiftCode.BBS.Model.sml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
