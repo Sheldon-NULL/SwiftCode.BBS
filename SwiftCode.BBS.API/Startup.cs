@@ -1,3 +1,4 @@
+using Autofac;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -132,6 +133,12 @@ namespace SwiftCode.BBS.API
             #endregion
         }
 
+        // 注意在Program.CreateHostBuilder，添加Autofac服务工厂
+        public void ConfigureContainer(ContainerBuilder builder)
+        {
+
+            builder.RegisterModule<AutofacModuleRegister>();
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

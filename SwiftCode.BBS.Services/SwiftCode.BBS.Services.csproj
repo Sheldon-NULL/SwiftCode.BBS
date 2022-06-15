@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\SwiftCode.BBS.IServices\SwiftCode.BBS.IServices.csproj" />
-    <ProjectReference Include="..\SwiftCode.BBS.Repositories\SwiftCode.BBS.Repositories.csproj" />
     <ProjectReference Include="..\SwitfCode.BBS.IRepositories\SwitfCode.BBS.IRepositories.csproj" />
   </ItemGroup>
 

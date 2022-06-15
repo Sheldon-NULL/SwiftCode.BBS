@@ -13,7 +13,6 @@ namespace SwiftCode.BBS.API.Controllers
     /// <summary>
     /// 授权
     /// </summary>
-    
     [Route("api/{controller}/{action}")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -26,6 +25,7 @@ namespace SwiftCode.BBS.API.Controllers
             _userInfoService = userInfoService;
             _mapper = mapper;
         }
+
         /// <summary>
         /// 登录
         /// </summary>
@@ -47,7 +47,7 @@ namespace SwiftCode.BBS.API.Controllers
             }
 
             var pass = MD5Helper.MD5Encrypt32(loginPassword);
-            var userInfo = await _userInfoService.GetAsync(x => x.LoginName == loginName && x.LoginPassWord == loginPassword);
+            var userInfo = await _userInfoService.FindAsync(x => x.LoginName == loginName && x.LoginPassWord == pass);
             if (userInfo is null)
             {
                 return new MessageModel<string>
@@ -62,6 +62,7 @@ namespace SwiftCode.BBS.API.Controllers
             {
                 success = true,
                 message = TipsModel.GetSuccess,
+                response = jwtStr,
             };
             
         }

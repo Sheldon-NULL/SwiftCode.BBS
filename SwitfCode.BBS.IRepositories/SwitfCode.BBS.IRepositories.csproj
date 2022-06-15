@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SwiftCode.BBS.Model\SwiftCode.BBS.Model.csproj" />
+    <ProjectReference Include="..\SwiftCode.BBS.IServices\SwiftCode.BBS.IServices.csproj" />
   </ItemGroup>
 
 </Project>
